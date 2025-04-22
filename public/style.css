@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    background-color: #000;
+    color: #33ff33;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#matrix-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.chat-container {
+    width: 80%;
+    max-width: 800px;
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #33ff33;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(51, 255, 51, 0.5);
+}
+
+.chat-header {
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid #33ff33;
+    text-align: center;
+}
+
+.chat-header h1 {
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px rgba(51, 255, 51, 0.8);
+}
+
+.chat-messages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message {
+    padding: 10px 15px;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user {
+    background-color: rgba(0, 100, 0, 0.6);
+    align-self: flex-end;
+    border: 1px solid #33ff33;
+}
+
+.bot {
+    background-color: rgba(0, 50, 0, 0.6);
+    align-self: flex-start;
+    border: 1px solid #33ff33;
+}
+
+.message-content {
+    color: #e0ffe0;
+}
+
+.chat-input {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #33ff33;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #33ff33;
+    background-color: rgba(0, 20, 0, 0.8);
+    color: #33ff33;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+#send-button {
+    padding: 10px 20px;
+    background-color: #005500;
+    color: #33ff33;
+    border: 1px solid #33ff33;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#send-button:hover {
+    background-color: #007700;
+    box-shadow: 0 0 10px rgba(51, 255, 51, 0.5);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #33ff33;
+    border-radius: 10px;
+}
